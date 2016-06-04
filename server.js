@@ -4,9 +4,9 @@ var mongoose        = require('mongoose');
 var morgan          = require('morgan');
 var bodyParser      = require('body-parser');
 var methodOverride  = require('method-override');
-var keys            = require('./keys.json');
+var keys            = require('./config.js');
 
-mongoose.connect(keys.db || process.env.DB);
+mongoose.connect(keys.db);
 
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
