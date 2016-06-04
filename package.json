@@ -1,9 +1,14 @@
 {
   "name": "angular-calories",
   "version": "1.0.0",
+  "engines": {
+    "node": "4.4.5",
+    "npm": "3.9.x"
+  },
   "description": "Simple calorie counting application",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
