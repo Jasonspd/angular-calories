@@ -7,7 +7,7 @@ var methodOverride  = require('method-override');
 
 mongoose.connect('mongodb://admin:admin@ds023373.mlab.com:23373/angular-calories');
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '../../app'));
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({'extended':'true'}));
 app.use(bodyParser.json());
@@ -67,9 +67,9 @@ app.delete('/api/foods/:food_id', function(req, res) {
 });
 
 app.get('*', function(req, res) {
-    res.sendFile('/index.html');
+    res.sendFile('../../index.html');
 })
 
 
-app.listen(process.env.PORT || 8080);
+app.listen(Number(process.env.PORT) || 8080);
 console.log('App running on port 8080');
