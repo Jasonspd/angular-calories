@@ -1,6 +1,4 @@
-var keys = require("./keys.json");
-
 module.exports = {
-	db: process.env.DB || keys.db,
-	key: process.env.KEY || keys.fatSecretKey
+	db: process.env.DB || require("./keys.json");.db,
+	key: process.env.KEY || require("./keys.json");.fatSecretKey
 }
