@@ -4,8 +4,9 @@ var mongoose        = require('mongoose');
 var morgan          = require('morgan');
 var bodyParser      = require('body-parser');
 var methodOverride  = require('method-override');
+var keys            = require('./keys.json');
 
-mongoose.connect('mongodb://admin:admin@ds023373.mlab.com:23373/angular-calories');
+mongoose.connect(keys.db || process.env.DB);
 
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
