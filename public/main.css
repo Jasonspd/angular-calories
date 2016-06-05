@@ -9,3 +9,11 @@ body {
 #list {
 	margin-bottom:30px;
 }
+
+.delete.glyphicon.glyphicon-remove:hover {
+	color:red;
+}
+
+#searchForm {
+	margin-top:100px;
+}
